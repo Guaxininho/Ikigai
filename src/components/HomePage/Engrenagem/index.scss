@@ -1,0 +1,34 @@
+.engrenagem{
+  position: relative;
+  grid-column: 1/2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 15rem;
+  cursor: pointer;
+  animation-name: rodando;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes rodando {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+@keyframes voltando {
+  from {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+// onClick={()=>{setRotacao = "360deg"}} style={{transform: translate(-50%, -50%) rotate(rotacao)}}

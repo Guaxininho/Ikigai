@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  // position: relative;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #050A26;
+  // overflow: hidden;
+ #root {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+ }
+}
+
+html {
+  font-size: 62.5%;
+}
