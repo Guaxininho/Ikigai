@@ -1,16 +1,33 @@
 import React from 'react'
 import './index.scss'
 import engrenagem from '../Engrenagem/engrenagem.png'
+import styled, { keyframes } from 'styled-components'
 
 export default function Pecas(props) {
+
+  const rodandoMenor = keyframes`
+    from {
+      transform: translate(calc(${props.x}), calc(${props.y})) rotate(${props.rotate});
+    }
+    to {
+      transform: translate(calc(${props.x}), calc(${props.y})) rotate(calc(${props.rotate} - 180deg));
+  }`;
+
+  const Engrena = styled.div`
+      animation-name: ${rodandoMenor};
+      animation-duration: 1.4s;
+      animation-play-state: ${props.ligar};
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+  `;
+
   return (
-    <figure className='Pecas' style={{
+    <Engrena className='Pecas' style={{
       transform: `translate(calc(${props.x}), calc(${props.y})) rotate(${props.rotate})`,
-      backgroundImage: `url(${engrenagem})`,
-      animationName: `rodandoMenor`,
-      animationPlayState: `running`
+      backgroundImage: `url(${engrenagem})`
     }}>{props.nome}
-    </figure>
+    </Engrena>
   )
 }
 

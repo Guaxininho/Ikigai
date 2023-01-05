@@ -19,8 +19,8 @@
       animation-name: rodando;
       animation-duration: 1.4s;
       animation-timing-function: linear;
-      animation-iteration-count: forwards;
-      animation-play-state: paused;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
     }
   }
   
@@ -34,15 +34,6 @@
   }
   to {
     transform: translate(-50%, -50%) rotate(180deg);
-  }
-}
-
-@keyframes voltando {
-  from {
-    transform: translate(-50%, -50%) rotate(180deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(0deg);
   }
 }
 
