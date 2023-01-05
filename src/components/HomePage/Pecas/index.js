@@ -9,8 +9,9 @@ export default function Pecas(props) {
       backgroundImage: `url(${engrenagem})`,
       animationName: `rodandoMenor`,
       animationPlayState: `running`
-    }}>{props.nome}</figure>
+    }}>{props.nome}
+    </figure>
   )
 }
 
-// eu preciso manter o valor de props.x e props.y e props.rotate, depois aplicar a animação, talvez o ideal seja desfazer esse componente e recriar ele na engrenagem e definir x, y e rotate na mão
+// eu preciso manter o valor de props.x e props.y e props.rotate, depois aplicar a animação, talvez o ideal seja desfazer esse componente e recriar ele na engrenagem e definir x, y e rotate na mão. Talvez eu possa fazer a posição fixa sem transform

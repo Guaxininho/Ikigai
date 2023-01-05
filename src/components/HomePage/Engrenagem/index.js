@@ -32,6 +32,7 @@ export default function Engrenagem() {
       }} className='engrenagem'>
       </div>
       <Pecas x = '-50% + 89px'  y = '-50% + 34px' rotate = '20deg' nomeAnimacao = 'rodandoMenor'/>
+      <Pecas x = '-50% - 89px'  y = '-50% - 34px' rotate = '20deg' nomeAnimacao = 'rodandoMenor'/>
     </div>
   )
   
