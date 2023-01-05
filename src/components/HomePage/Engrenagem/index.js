@@ -6,24 +6,22 @@ import engrenagem from './engrenagem.png'
 
 export default function Engrenagem() {
   const [rotacao, setRotacao] = useState('paused')
-  // const [nomeAnimacao, setnomeAnimacao] = useState('rodando')
-
+  // const Audio = 
   return (
     <div className='Eixo'> 
       <div onClick={()=>{
+          const Som = new Audio('./repetitivo.mp3')
+          Som.volume = 0.05
+          Som.play()
           setRotacao('running')
-          setTimeout(() => {
-            setRotacao('paused')
-          }, 1400); // aqui ta o tempo que a animacao de rodar dura
-
         }} style={{
           animationPlayState: `${rotacao}`,
           animationName: `rodando`,
           backgroundImage: `url(${engrenagem})`
       }} className='engrenagem'>
       </div>
-      <Pecas x = '-50% + 89px'  y = '-50% + 34px' rotate = '20deg' ligar={rotacao}/>
-      <Pecas x = '-50% - 89px'  y = '-50% - 34px' rotate = '20deg' ligar={rotacao}/>
+      <Pecas x = '-50% + 89px'  y = '-50% + 34px' rotate = '20deg' ligar={rotacao} />
+      <Pecas x = '-50% - 89px'  y = '-50% - 34px' rotate = '20deg' ligar={rotacao} />
     </div>
   )
   

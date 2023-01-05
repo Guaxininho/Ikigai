@@ -3,18 +3,14 @@
 .TextoInicial{
   margin: 0 auto;
   padding-top: 1rem;
-  font-size: 3.2rem;
-  color: white;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #358afa;
   text-align: center;
   font-family: 'EB Garamond', serif;
   width: 50rem;
   line-height: 140%;
-  .corDestaque{
-    margin: 0 auto;
-    margin-top: 1.5rem;
-    font-size: 3rem;
-    width: 40rem;
-    text-transform: uppercase;
-    color: #206bff;
-  }
+  place-self: center;
+  letter-spacing: .3rem;
+  word-spacing: .5rem;
 }

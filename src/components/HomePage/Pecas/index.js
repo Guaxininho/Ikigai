@@ -10,12 +10,12 @@ export default function Pecas(props) {
       transform: translate(calc(${props.x}), calc(${props.y})) rotate(${props.rotate});
     }
     to {
-      transform: translate(calc(${props.x}), calc(${props.y})) rotate(calc(${props.rotate} - 180deg));
+      transform: translate(calc(${props.x}), calc(${props.y})) rotate(calc(${props.rotate} - 360deg));
   }`;
 
   const Engrena = styled.div`
       animation-name: ${rodandoMenor};
-      animation-duration: 1.4s;
+      animation-duration: 2.8s;
       animation-play-state: ${props.ligar};
       animation-timing-function: linear;
       animation-iteration-count: infinite;
